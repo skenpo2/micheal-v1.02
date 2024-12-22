@@ -1,0 +1,220 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #1a1a1a;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.navbar {
+  position: fixed;
+  position: fixed;
+  top: 0;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid rgba(84, 84, 84, 0.48);
+}
+
+.content {
+  position: relative;
+  min-height: calc(100vh- 160px);
+  display: flex;
+}
+/* HERO SECTION */
+.left {
+  width: 50%;
+  position: fixed;
+  left: 0;
+  top: 100px;
+}
+
+.hero-content {
+  padding: 0 3rem 1rem 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+.text {
+  line-height: 1.5;
+  text-align: left;
+}
+.name {
+  background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  margin-bottom: 1rem;
+}
+
+.job {
+  font-size: 1.25rem;
+  color: azure;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  color: rgba(235, 235, 235, 0.6);
+  font-size: 1rem;
+}
+
+/* hero CTO */
+.cto {
+  display: flex;
+  gap: 18px;
+}
+
+.hire {
+  color: #213547;
+  font: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  background-color: #42b883;
+  padding: 8px 1em 8px 1em;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  transition-behavior: normal, normal;
+  transition-delay: 0s, 0s;
+  transition-duration: 0.5s, 0.5s;
+  transition-property: background-color, color;
+  transition-timing-function: ease, ease;
+}
+
+.download {
+  background: linear-gradient(#2f2f2f, #2f2f2f) padding-box,
+    linear-gradient(45deg, #42d392, #647eff) border-box;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 8px 18px;
+  color: #aac8e4;
+  font-size: 1rem;
+  font-weight: 600;
+  transition-behavior: normal, normal;
+  transition-delay: 0s, 0s;
+  transition-duration: 0.5s, 0.5s;
+  transition-property: background;
+  transition-timing-function: ease, ease;
+}
+
+.hire:hover {
+  background-color: #5bd8a0;
+}
+.download:hover {
+  background: linear-gradient(#373636, #373636) padding-box,
+    linear-gradient(45deg, #42d392, #647eff) border-box;
+  border: 2px solid transparent;
+}
+
+.page {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.page-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.line {
+  display: inline-block;
+  width: 50px;
+  height: 2px;
+  background-color: white;
+  transform-origin: left;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+}
+
+.page-container:hover .line {
+  transform: scaleX(1.5); /* Scale only the line */
+}
+
+.page-title {
+  display: inline-block;
+  color: white;
+  transition: color 0.6s ease-in-out; /* Smooth color transition for the title */
+}
+
+.page-container:hover .page-title {
+  color: orange; /* Change title color on hover */
+  transform: translateX(50px);
+}
+
+.social {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.2rem;
+}
+.svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  width: 36px;
+  padding: 2px;
+  color: rgba(235, 235, 235, 0.6);
+  border: 1px solid rgba(235, 235, 235, 0.6);
+  background-color: #242424;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.svg:hover {
+  color: white;
+  transform: scale(1.05);
+  border: 1px solid white;
+}
+
+.social-icon:hover {
+  color: whitesmoke;
+}
+
+/* Hero end */
+
+.right {
+  border: 2px solid red;
+  width: 50%;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  scrollbar-width: none;
+}
