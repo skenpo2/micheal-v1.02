@@ -33,9 +33,6 @@ const Hero = () => {
       <div className="social">
         <Social />
       </div>
-      <div className="footer">
-        Made with <FaHeart /> by Micheal
-      </div>
     </article>
   );
 };

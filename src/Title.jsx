@@ -1,4 +1,4 @@
 const Title = ({ title }) => {
-  return <h5 className="page-title">{title}</h5>;
+  return <h3 className="page-title">{title}</h3>;
 };
 export default Title;
