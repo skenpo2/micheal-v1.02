@@ -344,3 +344,40 @@ body::-webkit-scrollbar {
   color: #666;
   margin-top: 5px;
 }
+
+@media (max-width: 768px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .left {
+    order: 1;
+    position: relative;
+    width: 100%;
+  }
+
+  .right {
+    order: 2;
+    position: relative;
+    width: 100%;
+  }
+  .skill-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 0.75rem;
+  }
+
+  .hero-content {
+    padding: 1rem;
+  }
+
+  .right {
+    padding: 1rem;
+  }
+
+  .section-title {
+    display: none;
+  }
+}
