@@ -1,3 +1,4 @@
+import ProjectCard from './ProjectCard';
 import Title from './Title';
 
 const Projects = () => {
@@ -6,6 +7,7 @@ const Projects = () => {
       <h3 className="section-title">
         <Title title={'PROJECTS'} />
       </h3>
+      <ProjectCard />
     </div>
   );
 };
