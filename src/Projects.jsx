@@ -8,6 +8,12 @@ const Projects = () => {
         <Title title={'PROJECTS'} />
       </h3>
       <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
+      <ProjectCard />
     </div>
   );
 };
