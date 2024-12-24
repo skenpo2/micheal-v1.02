@@ -6,10 +6,10 @@ import Title from './Title';
 const About = () => {
   const [readMore, setReadMore] = useState(false);
   return (
-    <div className="about">
-      <div className="section-title">
+    <div className="section-container">
+      <h3 className="section-title">
         <Title title="ABOUT" />
-      </div>
+      </h3>
       <div className="about-text">
         {readMore ? (
           <article>

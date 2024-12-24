@@ -1,9 +1,13 @@
 import { skills } from './data';
 import Skill from './Skill';
+import Title from './Title';
 
 const Skills = () => {
   return (
     <div className="category-container">
+      <h3 className="page-title">
+        <Title title={'Skills and Tools'} />
+      </h3>
       <p>
         Over the years, I have gained valuable experience in various programming
         languages, and industry-standard frameworks.
