@@ -47,9 +47,9 @@ const Header = () => {
               </a>
             );
           })}
-          <div className="nav-bar-social">
+          {/* <div className="nav-bar-social">
             <Social />
-          </div>
+          </div> */}
         </ul>
       </div>
     </nav>
