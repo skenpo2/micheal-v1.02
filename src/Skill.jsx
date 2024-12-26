@@ -3,9 +3,13 @@ const Skill = ({ skill }) => {
     <div>
       <article className="skill">
         <span className="skill-svg-container">
-          <skill.icon className="skill-svg" />
+          <skill.icon className={`skill-svg ${skill.name}`} />
         </span>
-        {skill.name}
+        {skill.name === 'Node'
+          ? 'Node.js'
+          : skill.name === 'Next'
+          ? 'Next.js'
+          : skill.name}
         {/* <p>{skill.description}</p> */}
       </article>
     </div>

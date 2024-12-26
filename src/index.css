@@ -10,14 +10,75 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #1a1a1a;
+  --main-text-color: rgba(22, 22, 22, 0.922);
+  --main-bg-color: white;
+  --secondary-bg-color: rgb(241, 241, 241);
+  --fore-bg-color: rgb(241, 241, 241);
+  --btn-color: rgb(71, 101, 130);
+  --title-color: rgb(33, 53, 71);
+  --big-btn-color: rgb(71, 101, 130);
+  --small-btn-color: rgb(241, 241, 241);
+  --paragraph-text-color: rgba(55, 54, 54, 0.916);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* languages colors */
+
+  --color-node: #339933;
+  --color-next: #3b3939;
+  --color-css: #264de4;
+  --color-html: #e44d26;
+  --color-javascript: #dcc416e4;
+  --color-react: #3bc5ec;
+  --color-python: #3776ab;
+  --color-tailwind: #06b6d4;
+  --color-mongodb: #47a248;
+  --color-postgresql: #28567c;
+  --color-typescript: #3178c6;
+}
+
+[data-theme='dark'] {
+  --main-bg-color: #1a1a1a;
+  --main-text-color: rgba(241, 238, 238, 0.867);
+  --secondary-bg-color: #2f2f2f;
+  --fore-bg-color: #242424;
+  --btn-color: rgb(71, 101, 130);
+  --big-btn-color: #aac8e4;
+  --title-color: #aac8e4;
+  --small-btn-color: #213547;
+  --paragraph-text-color: rgba(235, 235, 235, 0.6);
+
+  --color-node: whitesmoke;
+  --color-next: whitesmoke;
+  --color-css: whitesmoke;
+  --color-html: whitesmoke;
+  --color-javascript: whitesmoke;
+  --color-react: whitesmoke;
+  --color-python: whitesmoke;
+  --color-tailwind: whitesmoke;
+  --color-mongodb: whitesmoke;
+  --color-postgresql: whitesmoke;
+  --color-typescript: whitesmoke;
+}
+
+/* darktheme {
+  --main-bg-color: #1a1a1a;
+  --secondary-bg-color:#2f2f2f;
+  --fore-bg-color: #242424;
+  --btn-color: rgb(71, 101, 130);
+  --big-btn-color:#aac8e4;
+  -small-btn-color:#213547;
+  --paragraph-text-color:rgba(235, 235, 235, 0.6)
+  
+} */
+
+body {
+  color: var(--main-text-color);
+  background-color: var(--main-bg-color);
+  transition: background-color 0.4s ease-in;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -35,25 +96,21 @@ a:hover {
 
 .navbar {
   position: fixed;
-  background-color: #1a1a1a;
-  z-index: 1000;
+  z-index: 100000;
   top: 0;
-  padding: 1rem 3rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 3rem;
   width: 100%;
   height: 60px;
+  background-color: var(--main-bg-color);
   border-bottom: 1px solid rgba(84, 84, 84, 0.48);
-  background-color: #1a1a1a;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 304 304' width='304' height='304'%3E%3Cpath fill='%23bbb0cc' fill-opacity='0.02' d='M44.1 224a5 5 0 1 1 0 2H0v-2h44.1zm160 48a5 5 0 1 1 0 2H82v-2h122.1zm57.8-46a5 5 0 1 1 0-2H304v2h-42.1zm0 16a5 5 0 1 1 0-2H304v2h-42.1zm6.2-114a5 5 0 1 1 0 2h-86.2a5 5 0 1 1 0-2h86.2zm-256-48a5 5 0 1 1 0 2H0v-2h12.1zm185.8 34a5 5 0 1 1 0-2h86.2a5 5 0 1 1 0 2h-86.2zM258 12.1a5 5 0 1 1-2 0V0h2v12.1zm-64 208a5 5 0 1 1-2 0v-54.2a5 5 0 1 1 2 0v54.2zm48-198.2V80h62v2h-64V21.9a5 5 0 1 1 2 0zm16 16V64h46v2h-48V37.9a5 5 0 1 1 2 0zm-128 96V208h16v12.1a5 5 0 1 1-2 0V210h-16v-76.1a5 5 0 1 1 2 0zm-5.9-21.9a5 5 0 1 1 0 2H114v48H85.9a5 5 0 1 1 0-2H112v-48h12.1zm-6.2 130a5 5 0 1 1 0-2H176v-74.1a5 5 0 1 1 2 0V242h-60.1zm-16-64a5 5 0 1 1 0-2H114v48h10.1a5 5 0 1 1 0 2H112v-48h-10.1zM66 284.1a5 5 0 1 1-2 0V274H50v30h-2v-32h18v12.1zM236.1 176a5 5 0 1 1 0 2H226v94h48v32h-2v-30h-48v-98h12.1zm25.8-30a5 5 0 1 1 0-2H274v44.1a5 5 0 1 1-2 0V146h-10.1zm-64 96a5 5 0 1 1 0-2H208v-80h16v-14h-42.1a5 5 0 1 1 0-2H226v18h-16v80h-12.1zm86.2-210a5 5 0 1 1 0 2H272V0h2v32h10.1zM98 101.9V146H53.9a5 5 0 1 1 0-2H96v-42.1a5 5 0 1 1 2 0zM53.9 34a5 5 0 1 1 0-2H80V0h2v34H53.9zm60.1 3.9V66H82v64H69.9a5 5 0 1 1 0-2H80V64h32V37.9a5 5 0 1 1 2 0zM101.9 82a5 5 0 1 1 0-2H128V37.9a5 5 0 1 1 2 0V82h-28.1zm16-64a5 5 0 1 1 0-2H146v44.1a5 5 0 1 1-2 0V18h-26.1zm102.2 270a5 5 0 1 1 0 2H98v14h-2v-16h124.1zM242 149.9V160h16v34h-16v62h48v48h-2v-46h-48v-66h16v-30h-16v-12.1a5 5 0 1 1 2 0zM53.9 18a5 5 0 1 1 0-2H64V2H48V0h18v18H53.9zm112 32a5 5 0 1 1 0-2H192V0h50v2h-48v48h-28.1zm-48-48a5 5 0 0 1-9.8-2h2.07a3 3 0 1 0 5.66 0H178v34h-18V21.9a5 5 0 1 1 2 0V32h14V2h-58.1zm0 96a5 5 0 1 1 0-2H137l32-32h39V21.9a5 5 0 1 1 2 0V66h-40.17l-32 32H117.9zm28.1 90.1a5 5 0 1 1-2 0v-76.51L175.59 80H224V21.9a5 5 0 1 1 2 0V82h-49.59L146 112.41v75.69zm16 32a5 5 0 1 1-2 0v-99.51L184.59 96H300.1a5 5 0 0 1 3.9-3.9v2.07a3 3 0 0 0 0 5.66v2.07a5 5 0 0 1-3.9-3.9H185.41L162 121.41v98.69zm-144-64a5 5 0 1 1-2 0v-3.51l48-48V48h32V0h2v50H66v55.41l-48 48v2.69zM50 53.9v43.51l-48 48V208h26.1a5 5 0 1 1 0 2H0v-65.41l48-48V53.9a5 5 0 1 1 2 0zm-16 16V89.41l-34 34v-2.82l32-32V69.9a5 5 0 1 1 2 0zM12.1 32a5 5 0 1 1 0 2H9.41L0 43.41V40.6L8.59 32h3.51zm265.8 18a5 5 0 1 1 0-2h18.69l7.41-7.41v2.82L297.41 50H277.9zm-16 160a5 5 0 1 1 0-2H288v-71.41l16-16v2.82l-14 14V210h-28.1zm-208 32a5 5 0 1 1 0-2H64v-22.59L40.59 194H21.9a5 5 0 1 1 0-2H41.41L66 216.59V242H53.9zm150.2 14a5 5 0 1 1 0 2H96v-56.6L56.6 162H37.9a5 5 0 1 1 0-2h19.5L98 200.6V256h106.1zm-150.2 2a5 5 0 1 1 0-2H80v-46.59L48.59 178H21.9a5 5 0 1 1 0-2H49.41L82 208.59V258H53.9zM34 39.8v1.61L9.41 66H0v-2h8.59L32 40.59V0h2v39.8zM2 300.1a5 5 0 0 1 3.9 3.9H3.83A3 3 0 0 0 0 302.17V256h18v48h-2v-46H2v42.1zM34 241v63h-2v-62H0v-2h34v1zM17 18H0v-2h16V0h2v18h-1zm273-2h14v2h-16V0h2v16zm-32 273v15h-2v-14h-14v14h-2v-16h18v1zM0 92.1A5.02 5.02 0 0 1 6 97a5 5 0 0 1-6 4.9v-2.07a3 3 0 1 0 0-5.66V92.1zM80 272h2v32h-2v-32zm37.9 32h-2.07a3 3 0 0 0-5.66 0h-2.07a5 5 0 0 1 9.8 0zM5.9 0A5.02 5.02 0 0 1 0 5.9V3.83A3 3 0 0 0 3.83 0H5.9zm294.2 0h2.07A3 3 0 0 0 304 3.83V5.9a5 5 0 0 1-3.9-5.9zm3.9 300.1v2.07a3 3 0 0 0-1.83 1.83h-2.07a5 5 0 0 1 3.9-3.9zM97 100a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-48 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 96a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-144a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM49 36a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM33 68a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 240a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm80-176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm112 176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 180a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 84a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6z'%3E%3C/path%3E%3C/svg%3E");
-
-  object-fit: cover;
+  transition: background-color 0.4s ease-in;
 }
 
 .logo {
-  font-size: 1.55rem;
+  font-size: 1.8rem;
   font-family: 'DynaPuff', cursive;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: -2px;
 }
 .log-bar {
@@ -61,6 +118,7 @@ a:hover {
 }
 .nav-container {
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -79,16 +137,19 @@ a:hover {
   height: 30px;
 }
 
+/* ThemeToggle styles starts here */
+
 .dark-outer-container {
-  width: 50px;
+  width: 46px;
   display: flex;
   justify-content: flex-end;
-  height: 26px;
+  height: 24px;
   padding: 2px;
   align-items: center;
-  background-color: #2f2f2f;
+  background-color: var(--secondary-bg-color);
   border-radius: 16px;
   border: 1px solid rgba(84, 84, 84, 0.48);
+  cursor: pointer;
 }
 
 .dark-inner-container {
@@ -96,15 +157,33 @@ a:hover {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  padding: 3px;
-  background-color: #1a1a1a;
+  padding: 2px;
+  margin: 2px;
   border: none;
 }
+.dark-outer-container .light {
+  background-color: #242424;
+  color: white;
+  transition: all 0.4s ease-in-out;
+  transform: translateX(-100%);
+}
 
+.dark-outer-container .dark {
+  background-color: whitesmoke;
+  transition: all 0.4s ease-in-out;
+}
 .dark-svg {
   width: 100%;
   height: 100%;
 }
+
+.light-svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ThemeToggle styles ends here */
+
 .menu-svg {
   width: 100%;
   height: 100%;
@@ -126,23 +205,20 @@ a:hover {
 }
 /* HERO SECTION */
 .left {
+  height: 100vh;
   width: 45%;
   position: fixed;
   left: 0;
   top: 50px;
-  background-color: #1a1a1a;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 304 304' width='304' height='304'%3E%3Cpath fill='%23bbb0cc' fill-opacity='0.035' d='M44.1 224a5 5 0 1 1 0 2H0v-2h44.1zm160 48a5 5 0 1 1 0 2H82v-2h122.1zm57.8-46a5 5 0 1 1 0-2H304v2h-42.1zm0 16a5 5 0 1 1 0-2H304v2h-42.1zm6.2-114a5 5 0 1 1 0 2h-86.2a5 5 0 1 1 0-2h86.2zm-256-48a5 5 0 1 1 0 2H0v-2h12.1zm185.8 34a5 5 0 1 1 0-2h86.2a5 5 0 1 1 0 2h-86.2zM258 12.1a5 5 0 1 1-2 0V0h2v12.1zm-64 208a5 5 0 1 1-2 0v-54.2a5 5 0 1 1 2 0v54.2zm48-198.2V80h62v2h-64V21.9a5 5 0 1 1 2 0zm16 16V64h46v2h-48V37.9a5 5 0 1 1 2 0zm-128 96V208h16v12.1a5 5 0 1 1-2 0V210h-16v-76.1a5 5 0 1 1 2 0zm-5.9-21.9a5 5 0 1 1 0 2H114v48H85.9a5 5 0 1 1 0-2H112v-48h12.1zm-6.2 130a5 5 0 1 1 0-2H176v-74.1a5 5 0 1 1 2 0V242h-60.1zm-16-64a5 5 0 1 1 0-2H114v48h10.1a5 5 0 1 1 0 2H112v-48h-10.1zM66 284.1a5 5 0 1 1-2 0V274H50v30h-2v-32h18v12.1zM236.1 176a5 5 0 1 1 0 2H226v94h48v32h-2v-30h-48v-98h12.1zm25.8-30a5 5 0 1 1 0-2H274v44.1a5 5 0 1 1-2 0V146h-10.1zm-64 96a5 5 0 1 1 0-2H208v-80h16v-14h-42.1a5 5 0 1 1 0-2H226v18h-16v80h-12.1zm86.2-210a5 5 0 1 1 0 2H272V0h2v32h10.1zM98 101.9V146H53.9a5 5 0 1 1 0-2H96v-42.1a5 5 0 1 1 2 0zM53.9 34a5 5 0 1 1 0-2H80V0h2v34H53.9zm60.1 3.9V66H82v64H69.9a5 5 0 1 1 0-2H80V64h32V37.9a5 5 0 1 1 2 0zM101.9 82a5 5 0 1 1 0-2H128V37.9a5 5 0 1 1 2 0V82h-28.1zm16-64a5 5 0 1 1 0-2H146v44.1a5 5 0 1 1-2 0V18h-26.1zm102.2 270a5 5 0 1 1 0 2H98v14h-2v-16h124.1zM242 149.9V160h16v34h-16v62h48v48h-2v-46h-48v-66h16v-30h-16v-12.1a5 5 0 1 1 2 0zM53.9 18a5 5 0 1 1 0-2H64V2H48V0h18v18H53.9zm112 32a5 5 0 1 1 0-2H192V0h50v2h-48v48h-28.1zm-48-48a5 5 0 0 1-9.8-2h2.07a3 3 0 1 0 5.66 0H178v34h-18V21.9a5 5 0 1 1 2 0V32h14V2h-58.1zm0 96a5 5 0 1 1 0-2H137l32-32h39V21.9a5 5 0 1 1 2 0V66h-40.17l-32 32H117.9zm28.1 90.1a5 5 0 1 1-2 0v-76.51L175.59 80H224V21.9a5 5 0 1 1 2 0V82h-49.59L146 112.41v75.69zm16 32a5 5 0 1 1-2 0v-99.51L184.59 96H300.1a5 5 0 0 1 3.9-3.9v2.07a3 3 0 0 0 0 5.66v2.07a5 5 0 0 1-3.9-3.9H185.41L162 121.41v98.69zm-144-64a5 5 0 1 1-2 0v-3.51l48-48V48h32V0h2v50H66v55.41l-48 48v2.69zM50 53.9v43.51l-48 48V208h26.1a5 5 0 1 1 0 2H0v-65.41l48-48V53.9a5 5 0 1 1 2 0zm-16 16V89.41l-34 34v-2.82l32-32V69.9a5 5 0 1 1 2 0zM12.1 32a5 5 0 1 1 0 2H9.41L0 43.41V40.6L8.59 32h3.51zm265.8 18a5 5 0 1 1 0-2h18.69l7.41-7.41v2.82L297.41 50H277.9zm-16 160a5 5 0 1 1 0-2H288v-71.41l16-16v2.82l-14 14V210h-28.1zm-208 32a5 5 0 1 1 0-2H64v-22.59L40.59 194H21.9a5 5 0 1 1 0-2H41.41L66 216.59V242H53.9zm150.2 14a5 5 0 1 1 0 2H96v-56.6L56.6 162H37.9a5 5 0 1 1 0-2h19.5L98 200.6V256h106.1zm-150.2 2a5 5 0 1 1 0-2H80v-46.59L48.59 178H21.9a5 5 0 1 1 0-2H49.41L82 208.59V258H53.9zM34 39.8v1.61L9.41 66H0v-2h8.59L32 40.59V0h2v39.8zM2 300.1a5 5 0 0 1 3.9 3.9H3.83A3 3 0 0 0 0 302.17V256h18v48h-2v-46H2v42.1zM34 241v63h-2v-62H0v-2h34v1zM17 18H0v-2h16V0h2v18h-1zm273-2h14v2h-16V0h2v16zm-32 273v15h-2v-14h-14v14h-2v-16h18v1zM0 92.1A5.02 5.02 0 0 1 6 97a5 5 0 0 1-6 4.9v-2.07a3 3 0 1 0 0-5.66V92.1zM80 272h2v32h-2v-32zm37.9 32h-2.07a3 3 0 0 0-5.66 0h-2.07a5 5 0 0 1 9.8 0zM5.9 0A5.02 5.02 0 0 1 0 5.9V3.83A3 3 0 0 0 3.83 0H5.9zm294.2 0h2.07A3 3 0 0 0 304 3.83V5.9a5 5 0 0 1-3.9-5.9zm3.9 300.1v2.07a3 3 0 0 0-1.83 1.83h-2.07a5 5 0 0 1 3.9-3.9zM97 100a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-48 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 96a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-144a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM49 36a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM33 68a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 240a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm80-176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm112 176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 180a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 84a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6z'%3E%3C/path%3E%3C/svg%3E");
-
   object-fit: cover;
   border: transparent;
-  height: 100vh;
 }
 
 .hero-content {
   padding: 2rem 1.5rem 1rem 3rem;
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
+  gap: 2rem;
   justify-content: space-between;
 }
 .text {
@@ -157,18 +233,19 @@ a:hover {
   font-size: 3rem;
   font-weight: 700;
   letter-spacing: -1.5px;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .job {
   font-size: 1.25rem;
-  color: azure;
-  margin-bottom: 1rem;
+  color: var(--big-btn-color);
+  margin-bottom: 0.8rem;
 }
 
 .intro {
-  color: rgba(235, 235, 235, 0.6);
-  font-size: 1rem;
+  color: var(--paragraph-text-color);
+  font-size: 0.875rem;
+  font-weight: 600;
 }
 
 /* hero CTO */
@@ -178,7 +255,7 @@ a:hover {
 }
 
 .hire {
-  color: #213547;
+  color: var(--small-btn-color);
   font: 1rem;
   font-weight: 600;
   border-radius: 8px;
@@ -197,8 +274,17 @@ a:hover {
   transition-timing-function: ease, ease;
 }
 
+.hire-svg {
+  color: var(--small-btn-color);
+  font-size: 1rem;
+}
+
 .download {
-  background: linear-gradient(#2f2f2f, #2f2f2f) padding-box,
+  background: linear-gradient(
+        var(--secondary-bg-color),
+        var(--secondary-bg-color)
+      )
+      padding-box,
     linear-gradient(45deg, #42d392, #647eff) border-box;
   border: 2px solid transparent;
   border-radius: 8px;
@@ -209,14 +295,10 @@ a:hover {
   gap: 6px;
   cursor: pointer;
   padding: 8px 18px;
-  color: #aac8e4;
+  color: var(--big-btn-color);
   font-size: 1rem;
   font-weight: 600;
-  transition-behavior: normal, normal;
-  transition-delay: 0s, 0s;
-  transition-duration: 0.5s, 0.5s;
-  transition-property: background;
-  transition-timing-function: ease, ease;
+  transition: all 0.4s ease-in-out;
 }
 
 .hire:hover {
@@ -226,6 +308,7 @@ a:hover {
   background: linear-gradient(#373636, #373636) padding-box,
     linear-gradient(45deg, #42d392, #647eff) border-box;
   border: 2px solid transparent;
+  color: var(--big-btn-color);
 }
 
 .page {
@@ -258,16 +341,11 @@ a:hover {
 
 .page-title {
   margin-bottom: 0.5rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   display: inline-block;
-  color: white;
+  color: var(--main-text-color);
   transition: color 0.6s ease-in-out; /* Smooth color transition for the title */
-}
-
-.page-container:hover .page-title {
-  color: orange; /* Change title color on hover */
-  transform: translateX(50px);
 }
 
 .social {
@@ -282,23 +360,37 @@ a:hover {
   height: 36px;
   width: 36px;
   padding: 2px;
-  color: rgba(235, 235, 235, 0.6);
-  border: 1px solid rgba(235, 235, 235, 0.6);
-  background-color: #242424;
+  color: var(--paragraph-text-color);
+  border: 1px solid var(--paragraph-text-color);
+  background-color: var(--fore-bg-color);
   border-radius: 50%;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease-in;
 }
 
 .svg:hover {
-  color: white;
   transform: scale(1.05);
   border: 1px solid white;
 }
 
 .social-icon:hover {
-  color: whitesmoke;
+  color: var(--fore-bg-color);
 }
 
+.twitter:hover {
+  fill: rgb(7, 31, 245);
+}
+
+.message:hover {
+  fill: rgba(122, 24, 2, 0.848);
+}
+
+.linkedIn:hover {
+  fill: #339933;
+}
+
+.git-hub:hover {
+  fill: rgb(2, 52, 121);
+}
 /* Hero end */
 
 .right {
@@ -307,6 +399,7 @@ a:hover {
   top: 100px;
   right: 0;
   padding: 2rem 3rem 1rem 1rem;
+  border: transparent;
 }
 
 body::-webkit-scrollbar {
@@ -321,7 +414,8 @@ body::-webkit-scrollbar {
 }
 
 .section-title {
-  background-color: #242424;
+  background-color: var(--fore-bg-color);
+  color: var(--title-color);
   position: absolute;
   top: -18px;
   left: 50%;
@@ -340,7 +434,7 @@ body::-webkit-scrollbar {
 }
 .about-text p {
   margin-bottom: 1rem;
-  color: rgba(235, 235, 235, 0.6);
+  color: var(--paragraph-text-color);
   text-align: left;
   line-height: 24px;
   font-size: 0.9rem;
@@ -351,14 +445,14 @@ body::-webkit-scrollbar {
   background: transparent;
   border: none;
   color: #42b883;
-  font-weight: 500;
-  font-size: 1rem;
+  font-weight: 700;
+  font-size: 0.9rem;
   cursor: pointer;
   transition: color 0.1s ease-in-out;
 }
 
 .read-btn:hover {
-  color: rgba(229, 228, 228, 0.708);
+  color: #045f16;
   text-decoration: underline;
 }
 
@@ -372,20 +466,6 @@ body::-webkit-scrollbar {
   font-size: 0.75rem;
   font-weight: 400;
   line-height: 24px;
-}
-.skill-category {
-  display: block;
-  width: fit-content;
-  padding: 6px 10px;
-  font-size: 0.75rem;
-  font-weight: 400;
-  border-radius: 6px;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  background: linear-gradient(#2f2f2f, #2f2f2f) padding-box,
-    linear-gradient(45deg, #42d392, #647eff) border-box;
-  border: 1px solid transparent;
-  border-radius: 8px;
 }
 
 .skill-container {
@@ -403,34 +483,24 @@ body::-webkit-scrollbar {
   justify-content: center;
   width: 100px;
   height: 100px;
-  background-color: #242424;
+  background-color: var(--fore-bg-color);
   border-radius: 8px;
   text-align: center;
   padding: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--paragraph-text-color);
 }
 
 .skill-svg-container {
-  width: 50px;
-  height: 50px;
+  width: 2.5rem;
+  height: 2.5rem;
   margin-bottom: 10px;
 }
 
 .skill-svg {
   width: 100%;
   height: 100%;
-  fill: whitesmoke;
-}
-
-.skill-name {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #333;
-}
-
-.skill-description {
-  font-size: 12px;
-  color: #666;
-  margin-top: 5px;
 }
 
 /* Experience section start */
@@ -462,6 +532,7 @@ body::-webkit-scrollbar {
   border-radius: 8px;
   border: 1px solid rgba(84, 84, 84, 0.48);
   padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
 }
 .project-image {
   width: 40%;
@@ -494,7 +565,7 @@ body::-webkit-scrollbar {
 .project-description {
   font-size: 0.75rem;
   font-weight: 400;
-  color: rgba(235, 235, 235, 0.6);
+  color: var(--paragraph-text-color);
 }
 /* color tags styles */
 .tag-container {
@@ -520,24 +591,114 @@ body::-webkit-scrollbar {
   border: none;
 }
 
-.javascript {
-  background-color: yellow;
+/* language Tag styling  */
+.tool .javascript {
+  background-color: #dcc416e4;
 }
 
-.css {
-  background-color: purple;
+.tool .css {
+  background-color: #264de4;
 }
 
-.react {
-  background-color: rgb(8, 8, 134);
+.tool .react {
+  background-color: #3bc5ec;
 }
 
-.html {
+.tool .html {
   background-color: rgb(196, 16, 16);
 }
 
-.api {
-  background-color: white;
+.tool .api {
+  background-color: rgb(246, 124, 9);
+}
+/* SVG for skills Styling for fill color only */
+
+.Node {
+  fill: var(--color-node);
+}
+.Next {
+  fill: var(--color-next);
+}
+.CSS {
+  fill: var(--color-css);
+}
+.HTML {
+  fill: var(--color-html);
+}
+.JavaScript {
+  fill: var(--color-javascript);
+}
+.React {
+  fill: var(--color-react);
+}
+.Python {
+  fill: var(--color-python);
+}
+.Tailwind {
+  fill: var(--color-tailwind);
+}
+.MongoDB {
+  fill: var(--color-mongodb);
+}
+.PostgreSQL {
+  fill: var(--color-postgresql);
+}
+.TypeScript {
+  fill: var(--color-typescript);
+}
+
+.skill:hover .Node,
+.skill:focus .Node {
+  fill: #339933;
+}
+
+.skill:hover .Next,
+.skill:focus .Next {
+  fill: #3b3939;
+}
+
+.skill:hover .CSS,
+.skill:focus .CSS {
+  fill: #264de4;
+}
+
+.skill:hover .HTML,
+.skill:focus .HTML {
+  fill: #e44d26;
+}
+
+.skill:hover .JavaScript,
+.skill:focus .JavaScript {
+  fill: #dcc416e4;
+}
+
+.skill:hover .Python,
+.skill:focus .Python {
+  fill: #3776ab;
+}
+
+.skill:hover .React,
+.skill:focus .React {
+  fill: #3bc5ec;
+}
+
+.skill:hover .Tailwind,
+.skill:focus .Tailwind {
+  fill: #06b6d4;
+}
+.skill:hover .MongoDB,
+.skill:focus .MongoDB {
+  fill: #47a248;
+}
+
+.skill:hover .PostgreSQL,
+.skill:focus .PostgreSQL {
+  fill: #28567c;
+}
+
+.skill:hover .TypeScript,
+.skill:focus .TypeScript {
+  fill: #3178c6;
 }
 
 @media (max-width: 768px) {

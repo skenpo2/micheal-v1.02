@@ -1,6 +1,7 @@
 import { FaTerminal, FaCloudDownloadAlt, FaHeart } from 'react-icons/fa';
 import Social from './Social';
 import Title from './Title';
+import ThemeToggle from './ThemeToggle';
 
 const Hero = () => {
   return (
@@ -14,8 +15,7 @@ const Hero = () => {
       </div>
       <div className="cto">
         <a className="hire" href="#">
-          <FaTerminal style={{ color: '#213547', fontWeight: 'bold' }} /> Hire
-          me!
+          <FaTerminal className="hire-svg" /> Hire me!
         </a>
         <a className="download" href="#">
           Download Resume

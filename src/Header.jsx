@@ -1,5 +1,5 @@
 import { HiOutlineMenuAlt3 } from 'react-icons/hi';
-import { MdOutlineDarkMode } from 'react-icons/md';
+import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
   return (
@@ -13,11 +13,7 @@ const Header = () => {
           </div>
         </div>
         <div className="nav-right">
-          <div className="dark-outer-container">
-            <span className="dark-inner-container">
-              <MdOutlineDarkMode className="dark-svg" />
-            </span>
-          </div>
+          <ThemeToggle />
           <div className="menu-container">
             <HiOutlineMenuAlt3 className="menu-svg" />
           </div>

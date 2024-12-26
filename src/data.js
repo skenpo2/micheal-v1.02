@@ -21,26 +21,26 @@ import { FaMessage } from 'react-icons/fa6';
 
 export const social = [
   {
-    id: nanoid(),
+    id: 1,
     name: 'git-hub',
     link: 'https://www.github',
     icon: FaGithub,
   },
   {
-    id: nanoid(),
+    id: 2,
     name: 'twitter',
     link: 'https://www.github',
     icon: FaTwitter,
   },
   {
-    id: nanoid(),
+    id: 3,
     name: 'message',
     link: 'https://www.github',
     icon: FaMessage,
   },
   {
-    id: nanoid(),
-    name: 'message',
+    id: 4,
+    name: 'linkedIn',
     link: 'https://www.github',
     icon: FaLinkedin,
   },
@@ -115,14 +115,14 @@ export const skills = [
         icon: FaReact,
       },
       {
-        name: 'Next.js',
+        name: 'Next',
         proficiency: 'Intermediate',
         description:
           'Intermediate expertise in Next.js, building server-rendered and statically generated applications.',
         icon: SiNextdotjs,
       },
       {
-        name: 'Node.js',
+        name: 'Node',
         proficiency: 'Intermediate',
         description:
           'Intermediate experience with Node.js, developing scalable and performant backend systems.',

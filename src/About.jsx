@@ -38,7 +38,7 @@ const About = () => {
                 setReadMore(!readMore);
               }}
             >
-              ......Continue reading
+              ....Continue reading
             </button>
           </p>
         )}
