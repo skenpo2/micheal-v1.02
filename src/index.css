@@ -545,7 +545,6 @@ body::-webkit-scrollbar {
 }
 
 .project-info {
-  width: 58%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -556,10 +555,31 @@ body::-webkit-scrollbar {
   object-fit: cover;
   border-radius: 8px;
 }
+
+.name-preview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2%;
+}
+
+.preview {
+  width: 35%;
+  display: flex;
+  gap: 1rem;
+  font-size: 0.7rem;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+}
 .project-name {
+  width: 60%;
   color: #42b883;
   text-transform: capitalize;
-  font-size: 1rem;
+  font-size: 0.875rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 4px 0 0;
 }
 
 .project-description {
@@ -567,6 +587,51 @@ body::-webkit-scrollbar {
   font-weight: 400;
   color: var(--paragraph-text-color);
 }
+
+.source {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--main-text-color);
+}
+.live-preview {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--main-text-color);
+}
+
+.live-preview .preview-link {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--main-text-color);
+}
+/* glowing for live preview */
+
+.glowing-dot {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #00d9ff; /* Neon blue */
+  box-shadow: 0 0 8px #00d9ff, 0 0 16px #00d9ff, 0 0 24px #00d9ff;
+  animation: glow 1s infinite ease-in-out;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 8px #00d9ff, 0 0 16px #00d9ff, 0 0 24px #00d9ff;
+  }
+  50% {
+    box-shadow: 0 0 16px #00d9ff, 0 0 32px #00d9ff, 0 0 48px #00d9ff;
+  }
+}
+
 /* color tags styles */
 .tag-container {
   display: flex;
@@ -592,23 +657,23 @@ body::-webkit-scrollbar {
 }
 
 /* language Tag styling  */
-.tool .javascript {
+.tool .Javascript {
   background-color: #dcc416e4;
 }
 
-.tool .css {
+.tool .CSS {
   background-color: #264de4;
 }
 
-.tool .react {
+.tool .React {
   background-color: #3bc5ec;
 }
 
-.tool .html {
+.tool .HTML {
   background-color: rgb(196, 16, 16);
 }
 
-.tool .api {
+.tool .API {
   background-color: rgb(246, 124, 9);
 }
 /* SVG for skills Styling for fill color only */

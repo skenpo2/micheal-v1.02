@@ -1,3 +1,4 @@
+import { FaGithub } from 'react-icons/fa';
 import PlaceHolder from './images/placeholder.png';
 import RevealOnScroll from './RevealOnScroll';
 import Tag from './Tag';
@@ -10,16 +11,30 @@ const ProjectCard = ({ name, image, description }) => {
           <img src={image || PlaceHolder} alt="Project preview" />
         </div>
         <div className="project-info">
-          <h3 className="project-name">{name || 'project name'}</h3>
+          <div className="name-preview">
+            <h3 className="project-name">{name || 'project name'}</h3>
+            <div className="preview">
+              <a href="#" className="source">
+                <FaGithub /> Source
+              </a>
+              <div className="live-preview">
+                <span className="glowing-dot"></span>
+                <a className="preview-link" href="#">
+                  Live
+                </a>
+              </div>
+            </div>
+          </div>
           <p className="project-description">
             {description ||
               'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet sunt a fuga nam eum officiis neque, ducimus fugit quas! Quae.'}
           </p>
           <div className="tag-container">
-            <Tag tool={'react'} />
-            <Tag tool={'api'} />
-            <Tag tool={'css'} />
-            <Tag tool={'javascript'} />
+            <Tag tool={'React'} />
+            <Tag tool={'HTML'} />
+            <Tag tool={'API'} />
+            <Tag tool={'CSS'} />
+            <Tag tool={'Javascript'} />
           </div>
         </div>
       </article>
