@@ -78,7 +78,7 @@
 body {
   color: var(--main-text-color);
   background-color: var(--main-bg-color);
-  transition: background-color 0.4s ease-in;
+  transition: background-color 0.1s ease-in;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -102,7 +102,7 @@ a:hover {
   width: 100%;
   background-color: var(--main-bg-color);
   border-bottom: 1px solid rgba(84, 84, 84, 0.48);
-  transition: background-color 0.4s ease-in;
+  transition: background-color 0.1s ease-in;
 }
 
 .logo {
