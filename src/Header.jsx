@@ -1,7 +1,21 @@
 import { HiOutlineMenuAlt3 } from 'react-icons/hi';
+import { FaXmark } from 'react-icons/fa6';
+import { useContext, useRef } from 'react';
 import ThemeToggle from './ThemeToggle';
-
+import { navLinks } from './data';
+import Social from './Social';
+import { ThemeContext } from './ThemeContext';
 const Header = () => {
+  const { showMenu, toggleMenu } = useContext(ThemeContext);
+  const containerRef = useRef(null);
+
+  const linkStyles = {
+    height: showMenu
+      ? `${containerRef.current.getBoundingClientRect().height}px`
+      : '0px',
+  };
+  console.log(linkStyles);
+
   return (
     <nav className="header">
       <div className="nav-container">
@@ -14,10 +28,29 @@ const Header = () => {
         </div>
         <div className="nav-right">
           <ThemeToggle />
-          <div className="menu-container">
-            <HiOutlineMenuAlt3 className="menu-svg" />
-          </div>
+          <button onClick={toggleMenu} className="menu-container">
+            {showMenu ? (
+              <FaXmark className="menu-svg" />
+            ) : (
+              <HiOutlineMenuAlt3 className="menu-svg" />
+            )}
+          </button>
         </div>
+      </div>
+
+      <div className="menu-page-container" style={linkStyles}>
+        <ul ref={containerRef} className="menu-list">
+          {navLinks.map((link) => {
+            return (
+              <a key={link.id} href={link.url} className="link-item">
+                {link.name}
+              </a>
+            );
+          })}
+          <div className="nav-bar-social">
+            <Social />
+          </div>
+        </ul>
       </div>
     </nav>
   );

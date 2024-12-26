@@ -13,11 +13,11 @@ const Skills = () => {
         <p>
           Over the years, I have gained valuable experience in various
           programming languages, and industry-standard frameworks.
-          <p>
-            I am proficient in database management and version control systems
-            such as Git and GitHub. My skill set also extends to CSS frameworks
-            and UI/UX design principles.
-          </p>
+        </p>
+        <p>
+          I am proficient in database management and version control systems
+          such as Git and GitHub. My skill set also extends to CSS frameworks
+          and UI/UX design principles.
         </p>
         <RevealOnScroll>
           {skills.map((group) => (
