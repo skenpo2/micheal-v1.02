@@ -47,8 +47,8 @@ export const social = [
 ];
 
 export const navLinks = [
-  { id: 1, name: 'About', url: '#home' },
-  { id: 2, name: 'Experience', url: '#about' },
+  { id: 1, name: 'About', url: '#about' },
+  { id: 2, name: 'Experience', url: '#experience' },
   { id: 3, name: 'Projects', url: '#projects' },
 ];
 

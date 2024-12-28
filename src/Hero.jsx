@@ -28,7 +28,6 @@ const Hero = () => {
       </div>
       <div className="page">
         {sections.map((section) => {
-          console.log(activeSection);
           return (
             <button
               className={`nav-btn ${

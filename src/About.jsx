@@ -6,7 +6,7 @@ import Title from './Title';
 const About = () => {
   const [readMore, setReadMore] = useState(false);
   return (
-    <section className="section-container">
+    <section id="about" className="section-container">
       <h3 className="section-title">
         <Title title="ABOUT" />
       </h3>

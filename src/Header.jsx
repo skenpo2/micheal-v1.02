@@ -13,7 +13,6 @@ const Header = () => {
       ? `${containerRef.current.getBoundingClientRect().height}px`
       : '0px',
   };
-  console.log(linkStyles);
 
   return (
     <nav className="header">
