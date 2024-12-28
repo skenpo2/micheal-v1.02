@@ -5,6 +5,7 @@ import Header from './Header';
 import Hero from './Hero';
 import Projects from './Projects';
 import { ThemeContext } from './ThemeContext';
+import Sections from './Sections';
 
 const App = () => {
   const { setShowMenu } = useContext(ThemeContext);
@@ -16,9 +17,7 @@ const App = () => {
           <Hero />
         </section>
         <section className="right">
-          <About />
-          <Experience />
-          <Projects />
+          <Sections />
         </section>
       </div>
     </main>

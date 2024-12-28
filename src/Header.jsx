@@ -3,10 +3,9 @@ import { FaXmark } from 'react-icons/fa6';
 import { useContext, useRef } from 'react';
 import ThemeToggle from './ThemeToggle';
 import { navLinks } from './data';
-import Social from './Social';
 import { ThemeContext } from './ThemeContext';
 const Header = () => {
-  const { showMenu, toggleMenu } = useContext(ThemeContext);
+  const { showMenu, toggleMenu, setShowMenu } = useContext(ThemeContext);
   const containerRef = useRef(null);
 
   const linkStyles = {
@@ -42,7 +41,12 @@ const Header = () => {
         <ul ref={containerRef} className="menu-list">
           {navLinks.map((link) => {
             return (
-              <a key={link.id} href={link.url} className="link-item">
+              <a
+                key={link.id}
+                href={link.url}
+                className="link-item"
+                onClick={() => setShowMenu(false)}
+              >
                 {link.name}
               </a>
             );

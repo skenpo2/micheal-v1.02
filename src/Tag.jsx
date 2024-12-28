@@ -1,8 +1,7 @@
 const Tag = ({ tool }) => {
   return (
     <div className="tool">
-      <span className={`tag ${tool}`}></span>
-      <p>{tool}</p>
+      <span className={`tag ${tool}`}>{tool}</span>
     </div>
   );
 };

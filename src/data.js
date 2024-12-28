@@ -47,10 +47,9 @@ export const social = [
 ];
 
 export const navLinks = [
-  { id: 1, name: 'Home', url: '#home' },
-  { id: 2, name: 'About', url: '#about' },
-  { id: 3, name: 'Projects', url: '#project' },
-  { id: 4, name: 'Contact', url: '#contact' },
+  { id: 1, name: 'About', url: '#home' },
+  { id: 2, name: 'Experience', url: '#about' },
+  { id: 3, name: 'Projects', url: '#projects' },
 ];
 
 export const aboutMe = {

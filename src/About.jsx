@@ -6,7 +6,7 @@ import Title from './Title';
 const About = () => {
   const [readMore, setReadMore] = useState(false);
   return (
-    <div className="section-container">
+    <section className="section-container">
       <h3 className="section-title">
         <Title title="ABOUT" />
       </h3>
@@ -44,7 +44,7 @@ const About = () => {
         )}
         <Skills />
       </div>
-    </div>
+    </section>
   );
 };
 export default About;

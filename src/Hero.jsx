@@ -1,9 +1,13 @@
+import { useContext } from 'react';
+import { ThemeContext } from './ThemeContext';
+
 import { FaTerminal, FaCloudDownloadAlt, FaHeart } from 'react-icons/fa';
 import Social from './Social';
-import Title from './Title';
-import ThemeToggle from './ThemeToggle';
+import { nanoid } from 'nanoid';
 
 const Hero = () => {
+  const { activeSection, sections, scrollToSection } = useContext(ThemeContext);
+
   return (
     <article className="hero-content">
       <div className="text">
@@ -23,12 +27,20 @@ const Hero = () => {
         </a>
       </div>
       <div className="page">
-        <div className="page-container">
-          <div className="line"></div>
-          <Title title="ABOUT" />
-        </div>
-        <Title title="EXPERIENCE" />
-        <Title title="PROJECTS" />
+        {sections.map((section) => {
+          console.log(activeSection);
+          return (
+            <button
+              className={`nav-btn ${
+                activeSection === section ? ' nav-btn page-active' : 'nav-btn'
+              }`}
+              key={section}
+              onClick={() => scrollToSection(section)}
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </button>
+          );
+        })}
       </div>
       <div className="social">
         <Social />

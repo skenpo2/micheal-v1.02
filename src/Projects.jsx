@@ -3,7 +3,7 @@ import Title from './Title';
 
 const Projects = () => {
   return (
-    <div className="section-container">
+    <section id="projects" className="section-container">
       <h3 className="section-title">
         <Title title={'PROJECTS'} />
       </h3>
@@ -14,7 +14,7 @@ const Projects = () => {
       <ProjectCard />
       <ProjectCard />
       <ProjectCard />
-    </div>
+    </section>
   );
 };
 export default Projects;
