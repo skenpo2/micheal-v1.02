@@ -565,7 +565,7 @@ body::-webkit-scrollbar {
   gap: 2%;
   border-radius: 8px;
   border: 1px solid rgba(84, 84, 84, 0.48);
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
   margin-bottom: 1.5rem;
   cursor: pointer;
   transition: background-color 0.1s ease-in;
@@ -575,7 +575,7 @@ body::-webkit-scrollbar {
   background-color: var(--fore-bg-color);
 }
 .project-image {
-  width: 40%;
+  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -617,14 +617,14 @@ body::-webkit-scrollbar {
   width: 60%;
   color: #42b883;
   text-transform: capitalize;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   overflow: hidden;
   text-overflow: ellipsis;
   padding: 0 4px 0 0;
 }
 
 .project-description {
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   font-weight: 400;
   color: var(--paragraph-text-color);
 }
@@ -633,7 +633,7 @@ body::-webkit-scrollbar {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 500;
   color: var(--main-text-color);
 }
@@ -641,7 +641,7 @@ body::-webkit-scrollbar {
   display: flex;
   gap: 6px;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 600;
   color: var(--main-text-color);
 }
