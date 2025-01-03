@@ -55,6 +55,7 @@ export const navLinks = [
 
 export const projects = [
   {
+    id: 100,
     name: 'Color generator',
     image: ColorGeneratorImage,
   },

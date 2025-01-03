@@ -3,16 +3,17 @@ import PlaceHolder from './images/placeholder.png';
 import RevealOnScroll from './RevealOnScroll';
 import Tag from './Tag';
 
-const ProjectCard = ({ name, image, description }) => {
+const ProjectCard = ({ project }) => {
+  console.log(project);
   return (
     <RevealOnScroll>
       <article className="project-card">
         <div className="project-image">
-          <img src={image || PlaceHolder} alt="Project preview" />
+          <img src={project.image || PlaceHolder} alt="Project preview" />
         </div>
         <div className="project-info">
           <div className="name-preview">
-            <h3 className="project-name">{name || 'project name'}</h3>
+            <h3 className="project-name">{project.name || 'project name'}</h3>
             <div className="preview">
               <a href="#" className="source">
                 <FaGithub /> Source
@@ -26,8 +27,9 @@ const ProjectCard = ({ name, image, description }) => {
             </div>
           </div>
           <p className="project-description">
-            {description ||
-              'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet sunt a fuga nam eum officiis neque, ducimus fugit quas! Quae.'}
+            {
+              'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet sunt a fuga nam eum officiis neque, ducimus fugit quas! Quae.'
+            }
           </p>
           <div className="tag-container">
             <Tag tool={'React'} />

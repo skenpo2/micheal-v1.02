@@ -1,5 +1,6 @@
 import ProjectCard from './ProjectCard';
 import Title from './Title';
+import { projects } from './data';
 
 const Projects = () => {
   return (
@@ -7,14 +8,12 @@ const Projects = () => {
       <h3 className="section-title">
         <Title title={'PROJECTS'} />
       </h3>
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
+
+      {projects.map((project) => {
+        return <ProjectCard key={project.id} project={project} />;
+      })}
     </section>
   );
 };
+
 export default Projects;
