@@ -26,11 +26,7 @@ const ProjectCard = ({ project }) => {
               </div>
             </div>
           </div>
-          <p className="project-description">
-            {
-              'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet sunt a fuga nam eum officiis neque, ducimus fugit quas! Quae.'
-            }
-          </p>
+          <p className="project-description">{project.description}</p>
           <div className="tag-container">
             <Tag tool={'React'} />
             <Tag tool={'HTML'} />
