@@ -1,4 +1,5 @@
 import { nanoid } from 'nanoid';
+import ColorGeneratorImage from './images/color-appr.png';
 import {
   FaGithub,
   FaLinkedin,
@@ -52,6 +53,12 @@ export const navLinks = [
   { id: 3, name: 'Projects', url: '#projects' },
 ];
 
+export const projects = [
+  {
+    name: 'Color generator',
+    image: ColorGeneratorImage,
+  },
+];
 export const aboutMe = {
   title: 'About Me',
   description: [
