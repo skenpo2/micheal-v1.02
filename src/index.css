@@ -101,7 +101,7 @@ a:hover {
   position: fixed;
   z-index: 100000;
   top: 0;
-  padding: 0.5rem 3rem;
+  padding: 1rem 3rem;
   width: 100%;
   background-color: var(--main-bg-color);
   border-bottom: 1px solid rgba(84, 84, 84, 0.48);
@@ -240,15 +240,15 @@ a:hover {
 .left {
   height: 100vh;
   width: 45%;
+  padding: 3rem 1.5rem 1rem 3rem;
   position: fixed;
   left: 0;
-  top: 50px;
+  top: 60px;
   object-fit: cover;
   border: transparent;
 }
 
 .hero-content {
-  padding: 2rem 1.5rem 1rem 3rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -430,9 +430,9 @@ a:hover {
 .right {
   width: 55%;
   position: absolute;
-  top: 100px;
+  top: 60px;
   right: 0;
-  padding: 2rem 3rem 1rem 1rem;
+  padding: 5rem 3rem 1rem 1rem;
   border: transparent;
 }
 
@@ -565,7 +565,7 @@ body::-webkit-scrollbar {
   gap: 2%;
   border-radius: 8px;
   border: 1px solid rgba(84, 84, 84, 0.48);
-  padding: 0.5rem 0.5rem;
+  padding: 0.5rem rem;
   margin-bottom: 1.5rem;
   cursor: pointer;
   transition: background-color 0.1s ease-in;
