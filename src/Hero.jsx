@@ -11,8 +11,8 @@ const Hero = () => {
   return (
     <article className="hero-content">
       <div className="text">
-        <h1 className="name">Michael Obarewon</h1>
-        <h3 className="job">Full Stack Web developer</h3>
+        <h1 className="name">Hello, I’m Michael</h1>
+        <h3 className="job"> A Full Stack Web developer</h3>
         <p className="intro">
           I build accessible, pixel-perfect digital experiences for the web.
         </p>
