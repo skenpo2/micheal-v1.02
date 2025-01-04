@@ -60,6 +60,7 @@ export const projects = [
     image: ColorGeneratorImage,
     description:
       'A React app that generates color variations using value.js, copies color codes to the clipboard with browser navigation, and provides user feedback via React Toastify. It uses nanoid for generating unique keys while rendering the color list',
+    tool: ['react', 'HTML', 'CSS', 'React Toastify'],
   },
 ];
 export const aboutMe = {

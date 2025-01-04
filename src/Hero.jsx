@@ -18,8 +18,8 @@ const Hero = () => {
         </p>
       </div>
       <div className="cto">
-        <a className="hire" href="#">
-          <FaTerminal className="hire-svg" /> Hire me!
+        <a className="hire" href="mailto:michealobarewon2015@gmail.com">
+          Contact Me
         </a>
         <a className="download" href="#">
           Download Resume
