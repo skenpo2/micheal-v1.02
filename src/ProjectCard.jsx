@@ -2,6 +2,7 @@ import { FaGithub } from 'react-icons/fa';
 import PlaceHolder from './images/placeholder.png';
 import RevealOnScroll from './RevealOnScroll';
 import Tag from './Tag';
+import { ImArrowUpRight2 } from 'react-icons/im';
 
 const ProjectCard = ({ project }) => {
   console.log(project);
@@ -15,13 +16,14 @@ const ProjectCard = ({ project }) => {
           <div className="name-preview">
             <h3 className="project-name">{project.name || 'project name'}</h3>
             <div className="preview">
-              <a href="#" className="source">
-                <FaGithub /> Source
-              </a>
+              <div className="source">
+                <a href="#" className="source-svg">
+                  <FaGithub className="preview-svgs" />
+                </a>
+              </div>
               <div className="live-preview">
-                <span className="glowing-dot"></span>
-                <a className="preview-link" href="#">
-                  Live
+                <a href="#" className="preview-svg">
+                  <ImArrowUpRight2 className="preview-svgs" />
                 </a>
               </div>
             </div>
@@ -30,7 +32,7 @@ const ProjectCard = ({ project }) => {
           <div className="tag-container">
             <Tag tool={'React'} />
             <Tag tool={'HTML'} />
-            <Tag tool={'API'} />
+
             <Tag tool={'CSS'} />
             <Tag tool={'Javascript'} />
           </div>
