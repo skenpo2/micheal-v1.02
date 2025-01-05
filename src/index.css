@@ -492,10 +492,11 @@ body::-webkit-scrollbar {
 .read-btn {
   background: transparent;
   border: none;
-  color: #42b883;
+  color: #158854;
   font-weight: 700;
   font-size: 0.9rem;
   cursor: pointer;
+  text-transform: capitalize;
   transition: color 0.1s ease-in-out;
 }
 
@@ -631,8 +632,9 @@ body::-webkit-scrollbar {
   width: 60%;
   color: #42b883;
   text-transform: capitalize;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   overflow: hidden;
+  font-weight: 600;
   text-overflow: ellipsis;
   padding: 0 4px 0 0;
 }

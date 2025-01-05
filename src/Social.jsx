@@ -6,7 +6,7 @@ const Social = () => {
       {social.map((link) => {
         return (
           <div className="social-container" key={link.id}>
-            <a className="svg" href={link.link}>
+            <a className="svg" href={link.link} target="_blank">
               <link.icon className={link.name} />
             </a>
           </div>
