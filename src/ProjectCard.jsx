@@ -17,12 +17,12 @@ const ProjectCard = ({ project }) => {
             <h3 className="project-name">{project.name || 'project name'}</h3>
             <div className="preview">
               <div className="source">
-                <a href="#" className="source-svg">
+                <a href={project.source} target="_blank" className="source-svg">
                   <FaGithub className="preview-svgs" />
                 </a>
               </div>
               <div className="live-preview">
-                <a href="#" className="preview-svg">
+                <a href={project.link} target="_blank" className="preview-svg">
                   <ImArrowUpRight2 className="preview-svgs" />
                 </a>
               </div>

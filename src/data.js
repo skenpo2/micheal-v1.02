@@ -19,30 +19,26 @@ import {
   SiPostgresql,
 } from 'react-icons/si';
 import { FaMessage } from 'react-icons/fa6';
+import { source } from 'framer-motion/client';
 
 export const social = [
   {
     id: 1,
     name: 'git-hub',
-    link: 'https://www.github',
+    link: 'https://github.com/skenpo2',
     icon: FaGithub,
   },
   {
     id: 2,
     name: 'twitter',
-    link: 'https://www.github',
+    link: 'https://x.com/skenpo2',
     icon: FaTwitter,
   },
+
   {
     id: 3,
-    name: 'message',
-    link: 'https://www.github',
-    icon: FaMessage,
-  },
-  {
-    id: 4,
     name: 'linkedIn',
-    link: 'https://www.github',
+    link: 'https://www.linkedin.com/in/michealobarewon',
     icon: FaLinkedin,
   },
 ];
@@ -61,6 +57,8 @@ export const projects = [
     description:
       'A React app that generates color variations using value.js, copies color codes to the clipboard with browser navigation, and provides user feedback via React Toastify. It uses nanoid for generating unique keys while rendering the color list',
     tool: ['react', 'HTML', 'CSS', 'React Toastify'],
+    source: 'https://github.com/skenpo2/color-app',
+    link: 'https://devcolorgenerator.vercel.app/',
   },
 ];
 export const aboutMe = {

@@ -239,7 +239,7 @@ a:hover {
 
 .content {
   position: relative;
-  min-height: calc(100vh- 160px);
+  height: 100vh;
   display: flex;
 }
 /* HERO SECTION */
@@ -579,7 +579,7 @@ body::-webkit-scrollbar {
   gap: 2%;
   border-radius: 8px;
   border: 1px solid rgba(84, 84, 84, 0.48);
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   margin-bottom: 1.5rem;
   cursor: pointer;
   transition: background-color 0.1s ease-in;
@@ -591,11 +591,12 @@ body::-webkit-scrollbar {
 .project-image {
   width: 60%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
   overflow: hidden;
-  border-radius: 8px;
-  border: 1px solid rgba(84, 84, 84, 0.48);
+  /* border-radius: 8px;
+  border: 1px solid rgba(84, 84, 84, 0.48); */
 }
 
 .project-info {
@@ -606,7 +607,6 @@ body::-webkit-scrollbar {
 
 .project-image img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
   border-radius: 6px;
 }
@@ -638,8 +638,8 @@ body::-webkit-scrollbar {
 }
 
 .project-description {
-  font-size: 0.65rem;
-  font-weight: 400;
+  font-size: 0.75rem;
+  font-weight: 500;
   color: var(--paragraph-text-color);
 }
 
